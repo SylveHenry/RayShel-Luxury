@@ -1,0 +1,271 @@
+.wishlistPage {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: 40px 0 80px;
+}
+
+.container {
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.emptyWishlist {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 60px 20px;
+  margin: 40px auto;
+  max-width: 500px;
+}
+
+.emptyIcon {
+  color: #999;
+  margin-bottom: 20px;
+}
+
+.emptyWishlist h3 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-bottom: 16px;
+}
+
+.emptyWishlist p {
+  color: #666;
+  margin-bottom: 32px;
+  line-height: 1.6;
+}
+
+.continueButton {
+  display: inline-block;
+  padding: 12px 30px;
+  background-color: #000;
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+}
+
+.continueButton:hover {
+  background-color: #333;
+}
+
+.wishlistHeader {
+  display: grid;
+  grid-template-columns: 3fr 1fr 1fr 1fr;
+  padding: 16px 0;
+  border-bottom: 1px solid #e0e0e0;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #666;
+  margin-top: 40px;
+}
+
+.headerCell {
+  padding: 0 10px;
+}
+
+.wishlistItems {
+  margin: 20px 0 40px;
+}
+
+.wishlistItem {
+  display: grid;
+  grid-template-columns: 3fr 1fr 1fr 1fr;
+  padding: 30px 0;
+  border-bottom: 1px solid #e0e0e0;
+  align-items: center;
+}
+
+.productCell {
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+}
+
+.productImage {
+  width: 100px;
+  margin-right: 20px;
+}
+
+.productInfo {
+  flex: 1;
+}
+
+.productName {
+  font-size: 1.1rem;
+  font-weight: 400;
+  margin-bottom: 6px;
+}
+
+.productName a {
+  color: #000;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.productName a:hover {
+  color: #666;
+}
+
+.productBrand {
+  font-size: 0.9rem;
+  color: #777;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.productColor {
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.priceCell {
+  padding: 0 10px;
+}
+
+.price {
+  font-size: 1rem;
+}
+
+.salePrice {
+  font-size: 1rem;
+  color: #d94141;
+}
+
+.originalPrice {
+  font-size: 0.9rem;
+  color: #999;
+  text-decoration: line-through;
+  display: block;
+  margin-top: 4px;
+}
+
+.stockCell {
+  padding: 0 10px;
+  font-size: 0.9rem;
+}
+
+.inStock {
+  color: #2e7d32;
+}
+
+.outOfStock {
+  color: #d32f2f;
+}
+
+.actionsCell {
+  padding: 0 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.actionButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 15px;
+  background: transparent;
+  border: 1px solid #e0e0e0;
+  color: #333;
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.actionButton:hover {
+  background-color: #f5f5f5;
+  border-color: #ccc;
+}
+
+.actionButton svg {
+  opacity: 0.6;
+}
+
+.addToCartButton {
+  background-color: #000;
+  color: #fff;
+  border-color: #000;
+}
+
+.addToCartButton:hover {
+  background-color: #333;
+  border-color: #333;
+}
+
+.addToCartButton:disabled {
+  background-color: #e0e0e0;
+  color: #999;
+  border-color: #e0e0e0;
+  cursor: not-allowed;
+}
+
+.wishlistActions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+
+.addAllButton {
+  padding: 12px 30px;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.addAllButton:hover {
+  background-color: #333;
+}
+
+@media (max-width: 768px) {
+  .wishlistHeader {
+    display: none;
+  }
+  
+  .wishlistItem {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 20px 0;
+  }
+  
+  .productCell {
+    padding: 0;
+  }
+  
+  .priceCell, .stockCell, .actionsCell {
+    padding: 0;
+  }
+  
+  .actionsCell {
+    flex-direction: row;
+  }
+  
+  .wishlistActions {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .continueButton, .addAllButton {
+    width: 100%;
+    text-align: center;
+  }
+} 

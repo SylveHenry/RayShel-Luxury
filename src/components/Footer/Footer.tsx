@@ -44,6 +44,8 @@ const Footer = () => {
                 <li><Link href="/sustainability">Sustainability</Link></li>
                 <li><Link href="/stores">Store Locator</Link></li>
                 <li><Link href="/careers">Careers</Link></li>
+                <li><Link href="/account">My Account</Link></li>
+                <li><Link href="/wishlist">My Wishlist</Link></li>
               </ul>
             </div>
             
