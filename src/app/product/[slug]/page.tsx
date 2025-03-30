@@ -4,14 +4,9 @@ import Link from 'next/link';
 import { SectionTitle } from '@/components/UI';
 import { ProductGrid } from '@/components/Products';
 import styles from './page.module.css';
+import { QuantitySelector } from '@/components/UI';
 
-type PageProps = {
-  params: {
-    slug: string;
-  }
-}
-
-export default function ProductDetail({ params }: PageProps) {
+export default function ProductDetail({ params }: { params: { slug: string } }) {
   // Mock product data
   const { slug } = params;
   
@@ -193,11 +188,7 @@ export default function ProductDetail({ params }: PageProps) {
 
               <div className={styles.quantitySelector}>
                 <h4>Quantity</h4>
-                <div className={styles.quantityControls}>
-                  <button className={styles.quantityBtn}>-</button>
-                  <input type="text" value="1" className={styles.quantityInput} readOnly />
-                  <button className={styles.quantityBtn}>+</button>
-                </div>
+                <QuantitySelector />
               </div>
             </div>
 

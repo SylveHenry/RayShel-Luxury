@@ -1,0 +1,14 @@
+{
+  "extends": ["next/core-web-vitals"],
+  "rules": {
+    "react-hooks/exhaustive-deps": "warn",
+    "@next/next/no-html-link-for-pages": "error"
+  },
+  "ignorePatterns": [
+    ".next/",
+    "out/",
+    "node_modules/",
+    ".env*",
+    ".cache/"
+  ]
+} 

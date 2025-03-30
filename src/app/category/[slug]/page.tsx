@@ -87,13 +87,7 @@ const categoryNames: Record<string, string> = {
   'new-arrivals': 'New Arrivals',
 };
 
-type PageProps = {
-  params: {
-    slug: string;
-  }
-}
-
-export default function CategoryPage({ params }: PageProps) {
+export default function CategoryPage({ params }: { params: { slug: string } }) {
   const { slug } = params;
   const categoryName = categoryNames[slug] || 'Products';
   

@@ -1,0 +1,48 @@
+.quantityControls {
+  display: flex;
+  align-items: center;
+  height: 40px;
+  border: 1px solid #e0e0e0;
+  width: fit-content;
+  margin-top: 8px;
+}
+
+.quantityBtn {
+  background: transparent;
+  border: none;
+  color: #333;
+  font-size: 1.25rem;
+  width: 40px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.quantityBtn:hover {
+  background-color: #f0f0f0;
+}
+
+.quantityBtn:disabled {
+  color: #ccc;
+  cursor: not-allowed;
+}
+
+.quantityInput {
+  width: 40px;
+  height: 100%;
+  text-align: center;
+  border: none;
+  border-left: 1px solid #e0e0e0;
+  border-right: 1px solid #e0e0e0;
+  color: #333;
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 0;
+}
+
+.quantityInput:focus {
+  outline: none;
+} 
