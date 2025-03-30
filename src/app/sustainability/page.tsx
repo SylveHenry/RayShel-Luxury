@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import styles from './page.module.css';
 
 export default function SustainabilityPage() {
@@ -341,8 +342,8 @@ export default function SustainabilityPage() {
             We invite you to join us in creating a more responsible luxury industry.
           </p>
           <div className={styles.ctaButtons}>
-            <a href="/category/sustainable-collection" className={styles.primaryButton}>Shop Sustainable Collection</a>
-            <a href="/contact" className={styles.secondaryButton}>Contact Our Sustainability Team</a>
+            <Link href="/category/sustainable-collection" className={styles.primaryButton}>Shop Sustainable Collection</Link>
+            <Link href="/contact" className={styles.secondaryButton}>Contact Our Sustainability Team</Link>
           </div>
         </section>
       </div>

@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import styles from './page.module.css';
 
 export default function OurCraftPage() {
@@ -201,8 +202,8 @@ export default function OurCraftPage() {
           <h2>Experience Rayshel Craftsmanship</h2>
           <p>Discover our collections, each a testament to our commitment to excellence</p>
           <div className={styles.ctaButtons}>
-            <a href="/category/new-arrivals" className={styles.primaryButton}>Shop New Arrivals</a>
-            <a href="/stores" className={styles.secondaryButton}>Visit Our Boutiques</a>
+            <Link href="/category/new-arrivals" className={styles.primaryButton}>Shop New Arrivals</Link>
+            <Link href="/stores" className={styles.secondaryButton}>Visit Our Boutiques</Link>
           </div>
         </section>
       </div>
