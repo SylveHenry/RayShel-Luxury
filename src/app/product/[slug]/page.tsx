@@ -2,11 +2,22 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { SectionTitle } from '@/components/UI';
-import { ProductGrid } from '@/components/ProductGrid';
+import { ProductGrid } from '@/components/Products';
 import styles from './page.module.css';
 
-export default function ProductDetail({ params }: { params: { slug: string } }) {
+type PageProps = {
+  params: {
+    slug: string;
+  }
+}
+
+export default function ProductDetail({ params }: PageProps) {
   // Mock product data
+  const { slug } = params;
+  
+  // In a real app, you would fetch product data based on the slug
+  console.log(`Fetching product details for slug: ${slug}`);
+  
   const product = {
     id: 1,
     slug: 'quilted-leather-handbag',
@@ -49,7 +60,7 @@ export default function ProductDetail({ params }: { params: { slug: string } }) 
   // Mock related products
   const relatedProducts = [
     {
-      id: 2,
+      id: '2',
       name: 'Classic Leather Tote',
       brand: 'Rayshel',
       price: 1890,
@@ -60,7 +71,7 @@ export default function ProductDetail({ params }: { params: { slug: string } }) 
       hover_image: '/images/product-2-hover.jpg'
     },
     {
-      id: 3,
+      id: '3',
       name: 'Mini Crossbody Bag',
       brand: 'Rayshel',
       price: 1290,
@@ -72,7 +83,7 @@ export default function ProductDetail({ params }: { params: { slug: string } }) 
       hover_image: '/images/product-3-hover.jpg'
     },
     {
-      id: 4,
+      id: '4',
       name: 'Structured Leather Clutch',
       brand: 'Rayshel',
       price: 890,
@@ -83,7 +94,7 @@ export default function ProductDetail({ params }: { params: { slug: string } }) 
       hover_image: '/images/product-4-hover.jpg'
     },
     {
-      id: 5,
+      id: '5',
       name: 'Woven Handle Shoulder Bag',
       brand: 'Rayshel',
       price: 2190,

@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import styles from './HeroSlider.module.css';
@@ -29,17 +29,7 @@ const HeroSlider: React.FC<HeroSliderProps> = ({
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
 
-  useEffect(() => {
-    if (!autoPlay) return;
-
-    const interval = setInterval(() => {
-      goToNextSlide();
-    }, autoPlaySpeed);
-
-    return () => clearInterval(interval);
-  }, [currentSlide, autoPlay, autoPlaySpeed]);
-
-  const goToNextSlide = () => {
+  const goToNextSlide = useCallback(() => {
     if (isTransitioning) return;
     
     setIsTransitioning(true);
@@ -49,7 +39,17 @@ const HeroSlider: React.FC<HeroSliderProps> = ({
     setTimeout(() => {
       setIsTransitioning(false);
     }, 500); // Match this with the CSS transition time
-  };
+  }, [isTransitioning, slides.length]);
+
+  useEffect(() => {
+    if (!autoPlay) return;
+
+    const interval = setInterval(() => {
+      goToNextSlide();
+    }, autoPlaySpeed);
+
+    return () => clearInterval(interval);
+  }, [autoPlay, autoPlaySpeed, goToNextSlide]);
 
   const goToPrevSlide = () => {
     if (isTransitioning) return;

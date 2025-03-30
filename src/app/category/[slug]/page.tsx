@@ -2,6 +2,7 @@ import React from 'react';
 import { ProductGrid } from '@/components/Products';
 import { SectionTitle } from '@/components/UI';
 import styles from './page.module.css';
+import Link from 'next/link';
 
 // Mock product data - in a real app, this would come from an API or database
 const products = [
@@ -86,7 +87,13 @@ const categoryNames: Record<string, string> = {
   'new-arrivals': 'New Arrivals',
 };
 
-export default function CategoryPage({ params }: { params: { slug: string } }) {
+type PageProps = {
+  params: {
+    slug: string;
+  }
+}
+
+export default function CategoryPage({ params }: PageProps) {
   const { slug } = params;
   const categoryName = categoryNames[slug] || 'Products';
   
@@ -111,40 +118,40 @@ export default function CategoryPage({ params }: { params: { slug: string } }) {
             <div className={styles.filterSection}>
               <h3 className={styles.filterTitle}>Categories</h3>
               <ul className={styles.filterList}>
-                <li><a href="/category/clothing" className={slug === 'clothing' ? styles.active : ''}>Clothing</a></li>
-                <li><a href="/category/shoes" className={slug === 'shoes' ? styles.active : ''}>Shoes</a></li>
-                <li><a href="/category/bags" className={slug === 'bags' ? styles.active : ''}>Bags</a></li>
-                <li><a href="/category/accessories" className={slug === 'accessories' ? styles.active : ''}>Accessories</a></li>
-                <li><a href="/category/jewelry" className={slug === 'jewelry' ? styles.active : ''}>Jewelry</a></li>
+                <li><Link href="/category/clothing" className={slug === 'clothing' ? styles.active : ''}>Clothing</Link></li>
+                <li><Link href="/category/shoes" className={slug === 'shoes' ? styles.active : ''}>Shoes</Link></li>
+                <li><Link href="/category/bags" className={slug === 'bags' ? styles.active : ''}>Bags</Link></li>
+                <li><Link href="/category/accessories" className={slug === 'accessories' ? styles.active : ''}>Accessories</Link></li>
+                <li><Link href="/category/jewelry" className={slug === 'jewelry' ? styles.active : ''}>Jewelry</Link></li>
               </ul>
             </div>
             
             <div className={styles.filterSection}>
               <h3 className={styles.filterTitle}>Price Range</h3>
               <ul className={styles.filterList}>
-                <li><a href="#">Under $500</a></li>
-                <li><a href="#">$500 - $1000</a></li>
-                <li><a href="#">$1000 - $2000</a></li>
-                <li><a href="#">$2000 - $5000</a></li>
-                <li><a href="#">$5000+</a></li>
+                <li><Link href="#">Under $500</Link></li>
+                <li><Link href="#">$500 - $1000</Link></li>
+                <li><Link href="#">$1000 - $2000</Link></li>
+                <li><Link href="#">$2000 - $5000</Link></li>
+                <li><Link href="#">$5000+</Link></li>
               </ul>
             </div>
             
             <div className={styles.filterSection}>
               <h3 className={styles.filterTitle}>Brand</h3>
               <ul className={styles.filterList}>
-                <li><a href="#">Rayshel Collection</a></li>
-                <li><a href="#">Rayshel Accessories</a></li>
-                <li><a href="#">Rayshel Jewelry</a></li>
+                <li><Link href="#">Rayshel Collection</Link></li>
+                <li><Link href="#">Rayshel Accessories</Link></li>
+                <li><Link href="#">Rayshel Jewelry</Link></li>
               </ul>
             </div>
             
             <div className={styles.filterSection}>
               <h3 className={styles.filterTitle}>Featured</h3>
               <ul className={styles.filterList}>
-                <li><a href="/category/new-arrivals" className={slug === 'new-arrivals' ? styles.active : ''}>New Arrivals</a></li>
-                <li><a href="/sale">Sale</a></li>
-                <li><a href="/category/exclusive">Exclusive</a></li>
+                <li><Link href="/category/new-arrivals" className={slug === 'new-arrivals' ? styles.active : ''}>New Arrivals</Link></li>
+                <li><Link href="/sale">Sale</Link></li>
+                <li><Link href="/category/exclusive">Exclusive</Link></li>
               </ul>
             </div>
           </aside>
