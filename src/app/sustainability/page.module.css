@@ -1,0 +1,505 @@
+.sustainabilityPage {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Hero Section */
+.sustainabilityHero {
+  position: relative;
+  height: 500px;
+  background-image: url('/images/sustainability-hero.jpg');
+  background-size: cover;
+  background-position: center;
+  background-color: #f8f8f8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.sustainabilityHero::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6));
+  z-index: 1;
+}
+
+.heroContent {
+  max-width: 800px;
+  padding: 0 20px;
+  z-index: 2;
+  color: #fff;
+}
+
+.heroContent h1 {
+  font-size: 3.5rem;
+  font-weight: 300;
+  margin-bottom: 20px;
+  letter-spacing: 3px;
+}
+
+.heroContent p {
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  font-weight: 300;
+}
+
+.container {
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Intro Section */
+.introBanner {
+  padding: 80px 0;
+  text-align: center;
+}
+
+.introText {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.introText h2 {
+  font-size: 2.5rem;
+  font-weight: 300;
+  margin-bottom: 25px;
+  letter-spacing: 2px;
+  color: #111;
+}
+
+.introText p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #333;
+}
+
+/* Section Title */
+.sectionTitle {
+  font-size: 2.2rem;
+  font-weight: 300;
+  margin-bottom: 40px;
+  text-align: center;
+  letter-spacing: 1.5px;
+  color: #111;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.sectionTitle::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 1px;
+  background-color: #111;
+}
+
+/* Pillars Section */
+.pillarsSection {
+  padding: 60px 0;
+  background-color: #fafafa;
+}
+
+.pillarGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.pillarItem {
+  text-align: center;
+  padding: 30px 20px;
+  background-color: #fff;
+  border-radius: 2px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pillarItem:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.pillarIcon {
+  margin-bottom: 20px;
+}
+
+.pillarItem h3 {
+  font-size: 1.3rem;
+  font-weight: 400;
+  margin-bottom: 15px;
+  letter-spacing: 0.5px;
+  color: #111;
+}
+
+.pillarItem p {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #555;
+}
+
+/* Initiatives Section */
+.initiativesSection {
+  padding: 80px 0;
+}
+
+.initiativeItem {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  margin-bottom: 80px;
+  align-items: center;
+}
+
+.initiativeItem:last-child {
+  margin-bottom: 0;
+}
+
+.initiativeItem.reversed {
+  direction: rtl;
+}
+
+.initiativeContent {
+  direction: ltr;
+}
+
+.initiativeContent h3 {
+  font-size: 1.8rem;
+  font-weight: 300;
+  margin-bottom: 20px;
+  letter-spacing: 0.5px;
+  color: #111;
+}
+
+.initiativeContent p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin-bottom: 30px;
+  color: #444;
+}
+
+.progressContainer {
+  margin-top: 20px;
+}
+
+.progressLabel {
+  font-size: 1rem;
+  margin-bottom: 8px;
+  color: #333;
+  font-weight: 500;
+}
+
+.progressBar {
+  height: 8px;
+  background-color: #e0e0e0;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  background-color: #4CAF50;
+  border-radius: 4px;
+}
+
+.statsContainer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+  text-align: center;
+}
+
+.statItem {
+  display: flex;
+  flex-direction: column;
+}
+
+.statNumber {
+  font-size: 2.5rem;
+  font-weight: 300;
+  color: #111;
+  margin-bottom: 5px;
+}
+
+.statLabel {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.initiativeImage {
+  overflow: hidden;
+  border-radius: 2px;
+}
+
+.initiativeImage img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.initiativeImage:hover img {
+  transform: scale(1.03);
+}
+
+/* Certifications Section */
+.certificationsSection {
+  padding: 80px 0;
+  background-color: #fafafa;
+  text-align: center;
+}
+
+.certIntro {
+  max-width: 800px;
+  margin: 0 auto 50px;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #444;
+}
+
+.certGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.certItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 2px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.certItem:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.certItem img {
+  margin-bottom: 20px;
+}
+
+.certItem h4 {
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: #333;
+  letter-spacing: 0.3px;
+}
+
+/* Transparency Section */
+.transparencySection {
+  padding: 80px 0;
+}
+
+.transparencyIntro {
+  max-width: 800px;
+  margin: 0 auto 40px;
+  text-align: center;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #444;
+}
+
+.reportLinks {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.reportLink {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 25px 30px;
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  text-decoration: none;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.reportLink:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  border-color: #bdbdbd;
+}
+
+.reportIcon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  background-color: #f5f5f5;
+  border-radius: 50%;
+  color: #111;
+}
+
+.reportText {
+  flex: 1;
+}
+
+.reportTitle {
+  display: block;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #111;
+  margin-bottom: 5px;
+}
+
+.reportDesc {
+  display: block;
+  font-size: 0.95rem;
+  color: #666;
+}
+
+/* CTA Section */
+.sustainabilityCTA {
+  padding: 100px 0;
+  text-align: center;
+  background-color: #f2f7f2;
+  margin-top: 60px;
+}
+
+.sustainabilityCTA h2 {
+  font-size: 2.2rem;
+  font-weight: 300;
+  margin-bottom: 15px;
+  letter-spacing: 1.5px;
+  color: #111;
+}
+
+.sustainabilityCTA p {
+  font-size: 1.1rem;
+  margin-bottom: 40px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  color: #555;
+}
+
+.ctaButtons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.primaryButton {
+  background-color: #4CAF50;
+  color: #fff;
+  padding: 15px 35px;
+  text-decoration: none;
+  font-size: 0.95rem;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  border: 1px solid #4CAF50;
+}
+
+.primaryButton:hover {
+  background-color: #43A047;
+}
+
+.secondaryButton {
+  background-color: transparent;
+  color: #4CAF50;
+  padding: 15px 35px;
+  text-decoration: none;
+  font-size: 0.95rem;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  border: 1px solid #4CAF50;
+}
+
+.secondaryButton:hover {
+  background-color: #4CAF50;
+  color: #fff;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .pillarGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .certGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 960px) {
+  .initiativeItem {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    margin-bottom: 60px;
+  }
+  
+  .initiativeItem.reversed {
+    direction: ltr;
+  }
+  
+  .sustainabilityHero {
+    height: 400px;
+  }
+  
+  .heroContent h1 {
+    font-size: 2.8rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .pillarGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .certGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .statsContainer {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .reportLink {
+    padding: 20px;
+  }
+  
+  .sustainabilityHero {
+    height: 300px;
+  }
+  
+  .heroContent h1 {
+    font-size: 2.2rem;
+  }
+  
+  .introBanner,
+  .pillarsSection,
+  .initiativesSection,
+  .certificationsSection,
+  .transparencySection {
+    padding: 50px 0;
+  }
+  
+  .ctaButtons {
+    flex-direction: column;
+    gap: 15px;
+    max-width: 250px;
+    margin: 0 auto;
+  }
+} 
