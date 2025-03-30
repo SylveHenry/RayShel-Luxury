@@ -1,0 +1,130 @@
+.categoryPage {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--spacing-4);
+  width: 100%;
+}
+
+.categoryHeader {
+  padding: var(--spacing-12) 0;
+  background-color: var(--muted);
+  margin-bottom: var(--spacing-8);
+}
+
+.categoryContent {
+  display: flex;
+  gap: var(--spacing-8);
+  margin-bottom: var(--spacing-16);
+}
+
+.filterSidebar {
+  width: 250px;
+  flex-shrink: 0;
+}
+
+.filterSection {
+  margin-bottom: var(--spacing-6);
+  border-bottom: 1px solid var(--border);
+  padding-bottom: var(--spacing-6);
+}
+
+.filterSection:last-child {
+  border-bottom: none;
+}
+
+.filterTitle {
+  font-size: var(--font-md);
+  margin-bottom: var(--spacing-4);
+  font-weight: 500;
+}
+
+.filterList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.filterList li {
+  margin-bottom: var(--spacing-2);
+}
+
+.filterList a {
+  color: var(--muted-foreground);
+  text-decoration: none;
+  transition: color 0.2s ease;
+  font-size: var(--font-sm);
+}
+
+.filterList a:hover,
+.filterList a.active {
+  color: var(--primary);
+}
+
+.productGrid {
+  flex: 1;
+}
+
+.sortRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-6);
+  padding-bottom: var(--spacing-4);
+  border-bottom: 1px solid var(--border);
+}
+
+.resultCount {
+  color: var(--muted-foreground);
+  font-size: var(--font-sm);
+}
+
+.sortDropdown {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  font-size: var(--font-sm);
+}
+
+.sortSelect {
+  border: 1px solid var(--border);
+  padding: var(--spacing-1) var(--spacing-3);
+  background-color: transparent;
+  font-family: 'Montserrat', sans-serif;
+  font-size: var(--font-sm);
+  cursor: pointer;
+}
+
+@media (max-width: 1024px) {
+  .categoryContent {
+    gap: var(--spacing-6);
+  }
+  
+  .filterSidebar {
+    width: 220px;
+  }
+}
+
+@media (max-width: 768px) {
+  .categoryContent {
+    flex-direction: column;
+  }
+  
+  .filterSidebar {
+    width: 100%;
+    margin-bottom: var(--spacing-6);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-4);
+  }
+  
+  .filterSection {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+} 

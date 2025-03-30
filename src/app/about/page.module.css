@@ -1,0 +1,219 @@
+.aboutPage {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--spacing-4);
+  width: 100%;
+}
+
+.hero {
+  position: relative;
+  height: 500px;
+  background-image: url('/images/about-hero.jpg');
+  background-size: cover;
+  background-position: center center;
+  color: var(--background);
+  display: flex;
+  align-items: center;
+  margin-bottom: var(--spacing-16);
+}
+
+.heroOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.heroTitle {
+  font-size: var(--font-4xl);
+  font-weight: 500;
+  margin-bottom: var(--spacing-4);
+  position: relative;
+  z-index: 2;
+}
+
+.heroSubtitle {
+  font-size: var(--font-xl);
+  position: relative;
+  z-index: 2;
+  max-width: 600px;
+}
+
+.storySection {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-10);
+  margin-bottom: var(--spacing-16);
+  align-items: center;
+}
+
+.storyContent, .craftContent {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-6);
+}
+
+.storyText p, .craftText p {
+  font-size: var(--font-md);
+  line-height: 1.8;
+  color: var(--muted-foreground);
+  margin-bottom: var(--spacing-4);
+}
+
+.storyImage, .craftImage {
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.storyImage:hover .image, .craftImage:hover .image, .teamImage:hover .image {
+  transform: scale(1.05);
+}
+
+.valuesSection {
+  margin-bottom: var(--spacing-16);
+}
+
+.valuesGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--spacing-6);
+  margin-top: var(--spacing-10);
+}
+
+.valueCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: var(--spacing-6);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.valueCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.valueIcon {
+  margin-bottom: var(--spacing-4);
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--muted);
+  color: var(--foreground);
+}
+
+.valueCard h3 {
+  font-size: var(--font-md);
+  font-weight: 500;
+  margin-bottom: var(--spacing-3);
+}
+
+.valueCard p {
+  font-size: var(--font-sm);
+  color: var(--muted-foreground);
+  line-height: 1.6;
+}
+
+.craftSection {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-10);
+  margin-bottom: var(--spacing-16);
+  align-items: center;
+}
+
+.teamSection {
+  margin-bottom: var(--spacing-16);
+}
+
+.teamGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-6);
+  margin-top: var(--spacing-10);
+}
+
+.teamMember {
+  text-align: center;
+}
+
+.teamImage {
+  overflow: hidden;
+  margin-bottom: var(--spacing-4);
+  border-radius: 4px;
+}
+
+.teamMember h3 {
+  font-size: var(--font-md);
+  font-weight: 500;
+  margin-bottom: var(--spacing-1);
+}
+
+.teamPosition {
+  font-size: var(--font-sm);
+  color: var(--muted-foreground);
+}
+
+@media (max-width: 1024px) {
+  .valuesGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    height: 400px;
+  }
+  
+  .heroTitle {
+    font-size: var(--font-3xl);
+  }
+  
+  .heroSubtitle {
+    font-size: var(--font-lg);
+  }
+  
+  .storySection, .craftSection {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-8);
+  }
+  
+  .craftImage {
+    order: 1;
+  }
+  
+  .craftContent {
+    order: 0;
+  }
+  
+  .teamGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .valuesGrid, .teamGrid {
+    grid-template-columns: 1fr;
+  }
+} 

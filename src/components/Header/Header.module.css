@@ -1,0 +1,280 @@
+.header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background-color: var(--background);
+  z-index: 100;
+  border-bottom: 1px solid var(--border);
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--spacing-4);
+}
+
+/* Header Top Section */
+.headerTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--spacing-2) 0;
+  font-size: var(--font-xs);
+  border-bottom: 1px solid var(--border);
+}
+
+.left, .right {
+  flex: 1;
+}
+
+.right {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.center {
+  text-align: center;
+}
+
+.announcement {
+  font-weight: 500;
+  letter-spacing: 0.05em;
+}
+
+.currencySelector select {
+  border: none;
+  background: transparent;
+  font-size: var(--font-xs);
+  font-family: 'Montserrat', sans-serif;
+  cursor: pointer;
+}
+
+.customerService a {
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.customerService a:hover {
+  color: var(--primary);
+}
+
+/* Header Main Section */
+.headerMain {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--spacing-4) 0;
+}
+
+.navToggle {
+  display: none;
+}
+
+.navToggle button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  padding: var(--spacing-2);
+}
+
+.navToggle span {
+  width: 20px;
+  height: 2px;
+  background-color: var(--foreground);
+  margin: 2px 0;
+  transition: transform 0.3s ease;
+}
+
+.logo {
+  text-align: center;
+}
+
+.logo a {
+  text-decoration: none;
+  display: block;
+}
+
+.logo h1 {
+  font-size: var(--font-2xl);
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  margin: 0;
+}
+
+.logo p {
+  font-size: var(--font-xs);
+  letter-spacing: 0.2em;
+  color: var(--muted-foreground);
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-6);
+}
+
+.actions button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: var(--spacing-1);
+}
+
+.actions svg {
+  color: var(--foreground);
+}
+
+.wishlist, .cart {
+  position: relative;
+}
+
+.countBadge {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  width: 16px;
+  height: 16px;
+  background-color: var(--primary);
+  color: white;
+  border-radius: 50%;
+  font-size: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Navigation */
+.navigation {
+  border-top: 1px solid var(--border);
+}
+
+.navList {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navItem {
+  position: relative;
+}
+
+.navItem > a {
+  display: block;
+  padding: var(--spacing-4) var(--spacing-5);
+  text-decoration: none;
+  font-size: var(--font-sm);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  transition: color 0.2s ease;
+}
+
+.navItem > a:hover {
+  color: var(--primary);
+}
+
+.featured {
+  color: var(--primary);
+}
+
+/* Mega Menu */
+.megaMenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  min-width: 600px;
+  background-color: var(--background);
+  border: 1px solid var(--border);
+  padding: var(--spacing-6);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 10;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.navItem:hover .megaMenu {
+  opacity: 1;
+  visibility: visible;
+}
+
+.megaMenuContent {
+  display: flex;
+  gap: var(--spacing-8);
+}
+
+.menuColumn {
+  flex: 1;
+}
+
+.menuColumn h4 {
+  font-size: var(--font-md);
+  margin-bottom: var(--spacing-4);
+  font-weight: 500;
+  letter-spacing: 0.1em;
+}
+
+.menuColumn ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menuColumn li {
+  margin-bottom: var(--spacing-2);
+}
+
+.menuColumn a {
+  text-decoration: none;
+  font-size: var(--font-sm);
+  transition: color 0.2s ease;
+}
+
+.menuColumn a:hover {
+  color: var(--primary);
+}
+
+.menuImage {
+  flex: 1.5;
+  overflow: hidden;
+}
+
+.menuImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.menuImage:hover img {
+  transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .headerTop {
+    display: none;
+  }
+  
+  .navigation {
+    display: none;
+  }
+  
+  .navToggle {
+    display: block;
+  }
+  
+  .headerMain {
+    padding: var(--spacing-4) 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .actions {
+    gap: var(--spacing-4);
+  }
+} 

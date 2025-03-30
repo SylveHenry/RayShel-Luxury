@@ -1,0 +1,290 @@
+.contactPage {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding-bottom: var(--spacing-16);
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--spacing-4);
+  width: 100%;
+}
+
+.contactHeader {
+  margin: var(--spacing-10) 0 var(--spacing-12);
+}
+
+.contactContent {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: var(--spacing-10);
+  margin-bottom: var(--spacing-16);
+}
+
+.contactForm {
+  border: 1px solid var(--border);
+  padding: var(--spacing-8);
+}
+
+.formHeader {
+  margin-bottom: var(--spacing-8);
+}
+
+.formHeader h2 {
+  font-size: var(--font-xl);
+  font-weight: 500;
+  margin-bottom: var(--spacing-3);
+}
+
+.formHeader p {
+  color: var(--muted-foreground);
+  font-size: var(--font-md);
+  line-height: 1.6;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4);
+}
+
+.formRow {
+  display: flex;
+  gap: var(--spacing-4);
+}
+
+.formGroup {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2);
+}
+
+.formGroup label {
+  font-size: var(--font-sm);
+  font-weight: 500;
+}
+
+.formControl {
+  width: 100%;
+  height: 48px;
+  border: 1px solid var(--border);
+  background-color: transparent;
+  padding: 0 var(--spacing-4);
+  font-size: var(--font-sm);
+  font-family: inherit;
+  transition: border-color 0.2s ease;
+}
+
+textarea.formControl {
+  height: auto;
+  padding: var(--spacing-3) var(--spacing-4);
+  resize: vertical;
+}
+
+.formControl:focus {
+  outline: none;
+  border-color: var(--foreground);
+}
+
+.formTerms {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-2);
+  margin: var(--spacing-2) 0;
+}
+
+.formTerms input {
+  margin-top: 5px;
+}
+
+.formTerms label {
+  font-size: var(--font-xs);
+  color: var(--muted-foreground);
+  line-height: 1.5;
+}
+
+.submitBtn {
+  width: 100%;
+  height: 48px;
+  background-color: var(--foreground);
+  color: var(--background);
+  border: none;
+  font-size: var(--font-sm);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  margin-top: var(--spacing-4);
+  transition: background-color 0.2s ease;
+}
+
+.submitBtn:hover {
+  background-color: var(--primary);
+}
+
+.contactInfo {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4);
+}
+
+.infoCard {
+  padding: var(--spacing-6);
+  border: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.infoIcon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: var(--muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--spacing-4);
+  color: var(--foreground);
+}
+
+.infoCard h3 {
+  font-size: var(--font-md);
+  font-weight: 500;
+  margin-bottom: var(--spacing-2);
+}
+
+.infoCard > p {
+  color: var(--muted-foreground);
+  font-size: var(--font-sm);
+  margin-bottom: var(--spacing-4);
+  line-height: 1.6;
+}
+
+.infoContact {
+  font-size: var(--font-sm);
+}
+
+.infoContact p {
+  margin-bottom: var(--spacing-1);
+  color: var(--muted-foreground);
+}
+
+.infoContact a {
+  color: var(--foreground);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.infoContact a:hover {
+  color: var(--primary);
+}
+
+.storeLocations {
+  margin-bottom: var(--spacing-16);
+}
+
+.storeGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-6);
+  margin-top: var(--spacing-10);
+}
+
+.storeCard {
+  border: 1px solid var(--border);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.storeCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.storeImage {
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.storeCard:hover .image {
+  transform: scale(1.05);
+}
+
+.storeInfo {
+  padding: var(--spacing-4);
+}
+
+.storeInfo h3 {
+  font-size: var(--font-lg);
+  font-weight: 500;
+  margin-bottom: var(--spacing-3);
+}
+
+.storeInfo address {
+  font-style: normal;
+  font-size: var(--font-sm);
+  color: var(--muted-foreground);
+  margin-bottom: var(--spacing-3);
+  line-height: 1.6;
+}
+
+.storeContact {
+  font-size: var(--font-sm);
+  margin-bottom: var(--spacing-3);
+  line-height: 1.6;
+}
+
+.storeContact a {
+  color: var(--foreground);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.storeContact a:hover {
+  color: var(--primary);
+}
+
+.storeHours {
+  font-size: var(--font-sm);
+  color: var(--muted-foreground);
+  line-height: 1.6;
+}
+
+@media (max-width: 992px) {
+  .contactContent {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-8);
+  }
+  
+  .storeGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .formRow {
+    flex-direction: column;
+  }
+  
+  .contactForm {
+    padding: var(--spacing-6);
+  }
+}
+
+@media (max-width: 576px) {
+  .storeGrid {
+    grid-template-columns: 1fr;
+  }
+} 
